@@ -1,0 +1,15 @@
+/home/lame_gremlin/chilliPublish_DominoChain/bin/Debug/net8.0/chilliPublish_DominoChain
+/home/lame_gremlin/chilliPublish_DominoChain/bin/Debug/net8.0/chilliPublish_DominoChain.deps.json
+/home/lame_gremlin/chilliPublish_DominoChain/bin/Debug/net8.0/chilliPublish_DominoChain.runtimeconfig.json
+/home/lame_gremlin/chilliPublish_DominoChain/bin/Debug/net8.0/chilliPublish_DominoChain.dll
+/home/lame_gremlin/chilliPublish_DominoChain/bin/Debug/net8.0/chilliPublish_DominoChain.pdb
+/home/lame_gremlin/chilliPublish_DominoChain/obj/Debug/net8.0/chilliPublish_DominoChain.GeneratedMSBuildEditorConfig.editorconfig
+/home/lame_gremlin/chilliPublish_DominoChain/obj/Debug/net8.0/chilliPublish_DominoChain.AssemblyInfoInputs.cache
+/home/lame_gremlin/chilliPublish_DominoChain/obj/Debug/net8.0/chilliPublish_DominoChain.AssemblyInfo.cs
+/home/lame_gremlin/chilliPublish_DominoChain/obj/Debug/net8.0/chilliPublish_DominoChain.csproj.CoreCompileInputs.cache
+/home/lame_gremlin/chilliPublish_DominoChain/obj/Debug/net8.0/chilliPublish_DominoChain.sourcelink.json
+/home/lame_gremlin/chilliPublish_DominoChain/obj/Debug/net8.0/chilliPublish_DominoChain.dll
+/home/lame_gremlin/chilliPublish_DominoChain/obj/Debug/net8.0/refint/chilliPublish_DominoChain.dll
+/home/lame_gremlin/chilliPublish_DominoChain/obj/Debug/net8.0/chilliPublish_DominoChain.pdb
+/home/lame_gremlin/chilliPublish_DominoChain/obj/Debug/net8.0/chilliPublish_DominoChain.genruntimeconfig.cache
+/home/lame_gremlin/chilliPublish_DominoChain/obj/Debug/net8.0/ref/chilliPublish_DominoChain.dll
