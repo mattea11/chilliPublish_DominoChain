@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("chilliPublish_DominoChain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2bcd00eefe50708ad11f6b42ebfffc53ec96a232")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f78bfd579eb1611c8002d8bac6c69df25648949e")]
 [assembly: System.Reflection.AssemblyProductAttribute("chilliPublish_DominoChain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("chilliPublish_DominoChain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
