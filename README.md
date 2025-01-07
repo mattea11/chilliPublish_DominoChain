@@ -11,9 +11,11 @@ If a circular chain is not possible, the program indicates such.
 
 
 ## My implementation assumes the following
-
 1. There is no limit to the length of the chains to be generated
-2. A domino may be flipped in order to create the chain
+
+##A case was implemnted for when a
+1. domino may be flipped in order to create the chain
+2. domino cannot be flipped
 
 
 ## Why I implemneted it the way I did
