@@ -9,51 +9,27 @@ class DominoChainMain
     {
         
         var dominoChainFinderWithFlipping = new CircularChainWithFlip();
+        var dominoChainFinderNoFlipping = new CircularChainNoFlip();
 
-        var test1 = CreateDominoesList(new Random(), 6, 3);
-        printDominoesList(test1);
-        var test2 = CreateDominoesList(new Random(), 6, 4);
-        printDominoesList(test2);
+        var tests = new List<List<(int, int)>>()
+        {
+            CreateDominoesList(new Random(), 6, 3),
+            CreateDominoesList(new Random(), 6, 4),
+            //since the above test cases are bieng randomly generated, its is unlikely 
+            //that a test case will be generated that would be able to create a domnino 
+            // circular chain ehnce I will hard code a few test cases
+            new List<(int, int)> { (5, 6), (6, 1), (1, 5) },
+            new List<(int, int)> { (1, 2), (3, 4), (5, 6) },
+            new List<(int, int)> { (2, 4), (4, 5), (5, 6) },
+            new List<(int, int)> { (2, 1), (2, 3), (1, 3) },
+            new List<(int, int)> { (3, 4), (1, 3), (4, 1) }
+        };
 
-        //since the above test cases are bieng randomly generated, its is unlikely 
-        //that a test case will be generated that would be able to create a domnino 
-        // circular chain ehnce I will hard code a few test cases
-        var test3 = new List<(int, int)> { (5, 6), (6, 1), (1, 5) };
-        printDominoesList(test3);
-        var test4 = new List<(int, int)> { (1, 2), (3, 4), (5, 6) };
-        printDominoesList(test4);
-        var test5 = new List<(int, int)> { (2, 4), (4, 5), (5, 6), };
-        printDominoesList(test5);
-        var test6 = new List<(int, int)> { (2, 1), (2, 3), (1, 3) };
-        printDominoesList(test6);
-        var test7 = new List<(int, int)> { (3, 4), (1, 3), (4, 1) };
-        printDominoesList(test7);
+        string chainWithFlip = "Domino Chain with flip";
+        string chainNoFlip = "Domino Chain with no flip";
 
-        Console.WriteLine("");
-        Console.WriteLine("----------------------");
-        Console.WriteLine("");
-
-
-        var result = dominoChainFinderWithFlipping.FindCircularChainByFlipping(test1);
-        checkPrintChainResult(result);
-
-        result = dominoChainFinderWithFlipping.FindCircularChainByFlipping(test2);
-        checkPrintChainResult(result);
-
-        result = dominoChainFinderWithFlipping.FindCircularChainByFlipping(test3);
-        checkPrintChainResult(result);
-
-                result = dominoChainFinderWithFlipping.FindCircularChainByFlipping(test4);
-        checkPrintChainResult(result);
-
-                result = dominoChainFinderWithFlipping.FindCircularChainByFlipping(test5);
-        checkPrintChainResult(result);
-
-                result = dominoChainFinderWithFlipping.FindCircularChainByFlipping(test6);
-        checkPrintChainResult(result);
-
-                result = dominoChainFinderWithFlipping.FindCircularChainByFlipping(test7);
-        checkPrintChainResult(result);
+        foreach (var test in tests)
+            RunTest(test, dominoChainFinderWithFlipping, dominoChainFinderNoFlipping, chainWithFlip, chainNoFlip);
 
     }
     
@@ -70,30 +46,31 @@ class DominoChainMain
         return dominoes;
     }
 
+    private static void RunTest(List<(int, int)> test, CircularChainWithFlip chainWithFlipFinder,
+                    CircularChainNoFlip chainNoFlipFinder, string chainWithFlip, string chainNoFlip)
+    {
+        printDominoesList(test);
+        checkPrintChainResult(chainWithFlipFinder.FindCircularChainByFlipping(test), chainWithFlip);
+        checkPrintChainResult(chainNoFlipFinder.FindCircularChainNoFlipping(test), chainNoFlip);
+    }
+
     private static void printDominoesList(List<(int, int)> dominoes)
     {
-        Console.WriteLine("Generated domino lists:");
+        Console.Write("\n\nGenerated domino lists:\t");
         
         foreach (var domino in dominoes)
             Console.Write($"[{domino.Item1}|{domino.Item2}] ");
-        
-        Console.WriteLine("\n");
     }
 
-    private static void checkPrintChainResult(List<(int, int)>? result)
+    private static void checkPrintChainResult(List<(int, int)>? result, string chainType)
     {
         if (result == null)
-        {
-            Console.WriteLine("No valid circular chain exists.");
-        }
+            Console.Write("\nNo valid circular chain exists.");
         else
         {
-            Console.Write("Circular Chain: ");
+            Console.Write($"\n{chainType}: ");
             foreach (var domino in result)
-            {
-                Console.Write($"[{domino.Item1}|{domino.Item2}] ");
-            }
-            Console.WriteLine("\n");
+                Console.Write($"[{domino.Item1}|{domino.Item2}]");
         }
     }
 }    
